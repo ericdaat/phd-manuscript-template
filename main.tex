@@ -1,0 +1,275 @@
+\documentclass[12pt, a4paper]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default, scale=.95]{opensans} % police Open Sans
+\usepackage{setspace}
+\usepackage{amsmath}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\usepackage{amsfonts}
+\usepackage{fancyhdr}
+\usepackage{amssymb}
+\usepackage[nottoc, notlof, notlot]{tocbibind}
+\usepackage{xcolor} % ou color selon l'installation
+\definecolor{Prune}{RGB}{99,0,60} % l14-33 : couleurs de la charte graphique upsaclay
+\definecolor{B1}{RGB}{49,62,72}
+\definecolor{C1}{RGB}{124,135,143}
+\definecolor{D1}{RGB}{213,218,223}
+\definecolor{A2}{RGB}{198,11,70}
+\definecolor{B2}{RGB}{237,20,91}
+\definecolor{C2}{RGB}{238,52,35}
+\definecolor{D2}{RGB}{243,115,32}
+\definecolor{A3}{RGB}{124,42,144}
+\definecolor{B3}{RGB}{125,106,175}
+\definecolor{C3}{RGB}{198,103,29}
+\definecolor{D3}{RGB}{254,188,24}
+\definecolor{A4}{RGB}{0,78,125}
+\definecolor{B4}{RGB}{14,135,201}
+\definecolor{C4}{RGB}{0,148,181}
+\definecolor{D4}{RGB}{70,195,210}
+\definecolor{A5}{RGB}{0,128,122}
+\definecolor{B5}{RGB}{64,183,105}
+\definecolor{C5}{RGB}{140,198,62}
+\definecolor{D5}{RGB}{213,223,61}
+\usepackage{mdframed}
+\usepackage{multirow} %% Pour mettre un texte sur plusieurs rangées
+\usepackage{multicol} %% Pour mettre un texte sur plusieurs colonnes
+\usepackage{scrextend} %Forcer la 4ème  de couverture en page pair
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[absolute]{textpos}
+\usepackage{colortbl}
+\usepackage{float}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage[strict]{changepage}
+\usepackage{acronym}   	 	% list of abbreviations / acronyms
+
+% Caption setup
+\usepackage{caption}
+\captionsetup{labelfont=bf}
+\captionsetup[figure]{font={stretch=1.5}}
+\captionsetup[table]{font={stretch=1.5}}
+% paramétrage couleur des liens hypertextes, toujours garder colorlinks=true
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=purple,
+    citecolor=purple
+}
+\usepackage[capitalise, noabbrev]{cleveref}
+
+\pagestyle{plain} % pour ne garder que les n°de page en milieu-bas et supprimer les indications de chapitre en marge haute
+
+% Code blocks formatting
+\usepackage{listings}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+  frame=tb,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  numbersep=5pt,
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4
+}
+
+% Maths macros
+\input{macros.sty}
+
+\begin{document}
+
+\begin{titlepage}
+
+  %\thispagestyle{empty}
+
+  \newgeometry{left=6cm,bottom=2cm, top=1cm, right=1cm}
+
+  \tikz[remember picture,overlay] \node[opacity=1,inner sep=0pt] at (-13mm,-135mm){\includegraphics{images/Frame-ups.pdf}};
+
+  %*****************************************************
+  %******** NUMÉRO D'ORDRE DE LA THÈSE À COMPLÉTER *****
+  %******** POUR LE SECOND DÉPOT                   *****
+  %*****************************************************
+
+  \color{white}
+
+  \begin{picture}(0,0)
+    \put(-152,-743){\rotatebox{90}{\Large \textsc{THESE DE DOCTORAT}}} \\
+    \put(-120,-743){\rotatebox{90}{NNT : 2020UPASA001}}
+  \end{picture}
+
+  %*****************************************************
+  %******************** TITRE **************************
+  %*****************************************************
+
+  \flushright
+  \vspace{10mm} % à régler éventuellement
+  \color{Prune}
+  \fontfamily{cmss}\fontseries{m}\fontsize{22}{26}\selectfont
+  \Huge Geographic and socio-demographic disparities in oncology care pathways \\
+
+  \normalsize
+  \color{black}
+  \Large{\textit{
+      Etude des disparités géographiques et socio-démographiques dans les parcours de soins en oncologie
+    }} \\
+  %*****************************************************
+
+  \fontfamily{fvs}\fontseries{m}\fontsize{8}{12}\selectfont
+
+  \vspace{1.5cm}
+
+  \normalsize
+  \textbf{Thèse de doctorat de l'université Paris-Saclay} \\
+
+  \vspace{6mm}
+
+  \small École doctorale n$^{\circ}$ 582, Cancérologie : Biologie, Médecine et Santé (CBMS)\\
+  \small Spécialité de doctorat: Recherche clinique, innovation technologique, santé publique \\
+  \vspace{6mm}
+
+  \footnotesize Thèse préparée dans les unités de recherche de l'Institut Curie et INRIA, sous la direction de Fabien Reyal, MD, PhD, et la co-direction de Marc Lelarge, PhD.\\
+  \vspace{15mm}
+
+  \textbf{Thèse soutenue à Paris-Saclay, le JJ Décembre 2022, par}\\
+  \bigskip
+  \Large {\color{Prune} \textbf{Eric DAOUD-ATTOYAN}} %
+
+  %************************************
+  \vspace{\fill} % ALIGNER LE TABLEAU EN BAS DE PAGE
+  %************************************
+
+  \bigskip
+
+  \flushleft
+  \small \textbf{Composition du jury}\\
+  \vspace{2mm}
+  \scriptsize
+  \begin{tabular}{|p{7cm}l}
+    \arrayrulecolor{Prune}
+
+    \textbf{Name} & Title \\
+    \textbf{Name} & Title \\
+  \end{tabular}
+
+\end{titlepage}
+
+%***************************
+%***** Acknowledgement *****
+%***************************
+
+\newgeometry{top=4cm, bottom=4cm, left=2cm, right=2cm}
+
+\begin{singlespace}
+  \setstretch{1.5}
+  \include{acknowledgement}
+\end{singlespace}
+
+%***************
+%***** TOC *****
+%***************
+
+\newgeometry{top=4cm, bottom=4cm, left=2cm, right=2cm}
+
+\tableofcontents
+
+%********************
+%***** Chapters *****
+%********************
+
+\newgeometry{top=4cm, bottom=4cm, left=2cm, right=2cm}
+
+\include{abbreviations}
+
+\begin{singlespace}
+  \setstretch{1.5}
+
+  \include{chapters/0-introduction}
+
+\end{singlespace}
+
+%**********************
+%***** References *****
+%**********************
+
+\newgeometry{top=4cm, bottom=4cm, left=2cm, right=2cm}
+
+\bibliographystyle{vancouver}
+\bibliography{references}
+
+%**************************************
+%***** List of tables and figures *****
+%**************************************
+
+\newgeometry{top=4cm, bottom=4cm, left=2cm, right=2cm}
+
+\listoffigures
+\listoftables
+
+%********************
+% 4eme de couverture
+%********************
+
+\checkoddpage
+\ifoddpage \newpage\thispagestyle{empty}\null\newpage \fi
+
+\thispagestyle{empty}
+\newgeometry{top=1.5cm, bottom=1.25cm, left=2cm, right=2cm}
+\fontfamily{rm}\selectfont
+
+\lhead{}
+\rhead{}
+\rfoot{}
+\cfoot{}
+\lfoot{}
+
+\noindent
+
+\includegraphics[height=2.45cm]{images/logos/logo_usp_CBMS.png}
+\vspace{1cm}
+
+\fontfamily{cmss}\fontseries{m}\selectfont
+
+\small
+
+\input{abstract-fr}
+
+\vspace{8mm}
+
+\input{abstract-en}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section headers format %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titleformat{\chapter}[hang]{\bfseries\Large\color{Prune}}{\thechapter\ -}{.1ex}
+{\vspace{0.1ex}
+}
+[\vspace{1ex}]
+\titlespacing{\chapter}{0pc}{0ex}{0.5pc}
+
+\titleformat{\section}[hang]{\bfseries\normalsize}{\thesection\ .}{0.5pt}
+{\vspace{0.1ex}
+}
+[\vspace{0.1ex}]
+\titlespacing{\section}{1.5pc}{4ex plus .1ex minus .2ex}{.8pc}
+
+\titleformat{\subsection}[hang]{\bfseries\small}{\thesubsection\ .}{1pt}
+{\vspace{0.1ex}
+}
+[\vspace{0.1ex}]
+\titlespacing{\subsection}{3pc}{2ex plus .1ex minus .2ex}{.1pc}
+
+\end{document}
