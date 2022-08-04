@@ -1,10 +1,32 @@
-# PhD Manuscript: Geographic and socio-demographic disparities in oncology care pathways.
+# PhD Manuscript template, from the Paris-Saclay University
+
+## Author
 
 **Eric Daoud<sup>1,2</sup>**
 
 1. Residual Tumor & Response to Treatment Laboratory, RT2Lab, INSERM, U932 Immunity and Cancer, Institut Curie, Université Paris, 75005 Paris, France
 2. INRIA, DI/ENS, PSL Research University, Paris, France
 
-## Abstract
+## About
 
-In France, during year 2018, there was 382,000 new cancer cases and 157,400 deaths. The 2014-2019 Cancer Plan sets new objectives for cancer care in France. In particular, objectives 2 and 7 emphasize the quality of the care pathways: they aim respectively to guarantee the quality and safety of care and ensure comprehensive and personalized care. In order to standardize the care pathways while personalizing care, care trajectories have been introduced. The definition of these optimal care trajectories is based on national and international good practice recommendations. We propose to study in detail the geographical and socio-demographic disparities in the care pathways of cancer patients in France. First, we will try to characterize the health care institutions in France based on their oncology activity. Then, we will study the distribution of these centers on the territory, in order to highlight possible disparities in access to them. Finally, we will try to propose a care center recommendation algorithm, using the French social security database (SNDS). This algorithm will aim at guiding patients towards the optimal center, in order to maximize the quality of the care pathways.
+The base template was downloaded from [this Overleaf project](https://fr.overleaf.com/latex/templates/template-paris-saclay-university-phd-thesis-2020/xqjtqtwcmztc),
+proposed by **Frederic Mazaleyrat**. I brought some modifications and new features
+like abbreviations, macros, and automated build with github actions.
+
+## How to use
+
+Everything happens in the [main.tex](./main.tex) file. The various steps to
+follow are marked with `TODO` comments, namely:
+
+- [ ] Edit English title
+- [ ] Edit French title
+- [ ] Edit Doctoral School name
+- [ ] Edit PhD Supervisors
+- [ ] Edit PhD defense date
+- [ ] Edit Jury members
+- [ ] Write acknowledgements in [acknowledgement.tex](./acknowledgement.tex) file
+- [ ] Write chapters in [chapters/](./chapters/) folder and import them
+- [ ] Write english abstract in [abstract-en](./abstract-en.tex)
+- [ ] Write french abstract in [abstract-fr](./abstract-fr.tex)
+- [ ] Add your own macros in [macros.sty](macros.sty)
+- [ ] Add your own abbreviations in [abbreviations.tex](./abbreviations.tex)

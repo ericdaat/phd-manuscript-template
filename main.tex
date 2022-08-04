@@ -85,7 +85,7 @@
   tabsize=4
 }
 
-% Maths macros
+% TODO: Add your own macros in macros.sty file
 \input{macros.sty}
 
 \begin{document}
@@ -111,17 +111,19 @@
   \end{picture}
 
   %*****************************************************
-  %******************** TITRE **************************
+  %******************** TITLE **************************
   %*****************************************************
 
   \flushright
   \vspace{10mm} % à régler éventuellement
   \color{Prune}
   \fontfamily{cmss}\fontseries{m}\fontsize{22}{26}\selectfont
+  % TODO: Title, in english
   \Huge Geographic and socio-demographic disparities in oncology care pathways \\
 
   \normalsize
   \color{black}
+  % TODO: Title, in french
   \Large{\textit{
       Etude des disparités géographiques et socio-démographiques dans les parcours de soins en oncologie
     }} \\
@@ -136,13 +138,16 @@
 
   \vspace{6mm}
 
+  % TODO: Edit Doctoral school name if needed
   \small École doctorale n$^{\circ}$ 582, Cancérologie : Biologie, Médecine et Santé (CBMS)\\
   \small Spécialité de doctorat: Recherche clinique, innovation technologique, santé publique \\
   \vspace{6mm}
 
+  % TODO: Edit PhD supervisors
   \footnotesize Thèse préparée dans les unités de recherche de l'Institut Curie et INRIA, sous la direction de Fabien Reyal, MD, PhD, et la co-direction de Marc Lelarge, PhD.\\
   \vspace{15mm}
 
+  % TODO: Edit PhD defense date
   \textbf{Thèse soutenue à Paris-Saclay, le JJ Décembre 2022, par}\\
   \bigskip
   \Large {\color{Prune} \textbf{Eric DAOUD-ATTOYAN}} %
@@ -153,6 +158,10 @@
 
   \bigskip
 
+  %**********************************
+  %***** TODO: Jury composition *****
+  %**********************************
+
   \flushleft
   \small \textbf{Composition du jury}\\
   \vspace{2mm}
@@ -160,20 +169,22 @@
   \begin{tabular}{|p{7cm}l}
     \arrayrulecolor{Prune}
 
+    % TODO: add jury members here
     \textbf{Name} & Title \\
     \textbf{Name} & Title \\
   \end{tabular}
 
 \end{titlepage}
 
-%***************************
-%***** Acknowledgement *****
-%***************************
+%*********************************
+%***** TODO: Acknowledgement *****
+%*********************************
 
 \newgeometry{top=4cm, bottom=4cm, left=2cm, right=2cm}
 
 \begin{singlespace}
   \setstretch{1.5}
+  % TODO: write acknowledgements in the acknowledgement.tex file
   \include{acknowledgement}
 \end{singlespace}
 
@@ -191,11 +202,13 @@
 
 \newgeometry{top=4cm, bottom=4cm, left=2cm, right=2cm}
 
+% TODO: add your own abbreviations in abbreviations.tex
 \include{abbreviations}
 
 \begin{singlespace}
   \setstretch{1.5}
 
+  % TODO: add chapters here, they are imported from the chapters/ folder
   \include{chapters/0-introduction}
 
 \end{singlespace}
@@ -244,10 +257,12 @@
 
 \small
 
+% TODO: Abstract in french
 \input{abstract-fr}
 
 \vspace{8mm}
 
+% TODO: Abstract in english
 \input{abstract-en}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
